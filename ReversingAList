@@ -1,0 +1,31 @@
+3 5
+first_element_location:70
+length:5
+3 jump
+len-1:0
+one:1
+two:2
+sum:0
+check:0
+
+jump:5 length two stop
+2 length one len-1
+7 first_element_location start
+1 first_element_location len-1 end
+1 start:0 end:0 sum
+
+7 start 39
+7 start 40
+2 sum 0 0
+7 end 49
+7 end 50
+2 sum 0 0
+
+2 end start check
+5 check two stop
+1 start one start
+2 end one end
+3 27
+stop:9
+
+3 5 6 7 4
