@@ -1,0 +1,29 @@
+3 5
+number:67
+revNum:0
+3 start
+revCopy:0
+remainder:0
+quotient:0
+count:1
+ten:10
+zero:0
+one:1
+start:7 number remainder
+5 remainder ten 31
+2 remainder ten remainder
+1 quotient one quotient
+3 17
+1 revNum revCopy revCopy
+1 count one count
+4 count ten 45
+3 31
+1 revCopy remainder revNum
+4 quotient zero stop
+7 quotient remainder
+
+7 zero quotient
+7 zero count
+7 zero revCopy
+3 17
+stop:9
