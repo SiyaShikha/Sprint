@@ -1,0 +1,26 @@
+3 7
+seq_location:55
+seq_length:3
+cycle_location:60
+cycle_length:7
+3 start
+one:1
+zero:0
+seq_count:0
+cycle_count:0
+
+start:7 cycle_location cycle_index
+7 cycle_length cycle_count
+copy:7 seq_location seq_index
+7 seq_length seq_count
+check_cycle:4 cycle_count zero halt
+b:4 seq_count zero copy
+7 seq_index:0 cycle_index:0
+1 seq_index one seq_index
+1 cycle_index one cycle_index
+2 seq_count one seq_count
+2 cycle_count one cycle_count
+3 check_cycle
+
+halt:9
+1 2 3
