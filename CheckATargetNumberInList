@@ -1,0 +1,22 @@
+3 7
+first_element_location:36
+length:5
+target:2
+result:0
+3 start
+one:1
+count:0
+start:7 first_element_location check
+4 count length stop
+4 check:0 target 32
+1 count one count 
+1 check one check
+3 14
+7 one result
+stop:9
+
+7
+3
+2
+9
+8
