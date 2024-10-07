@@ -1,0 +1,139 @@
+3 start
+program_start_location:program
+p_s_minus_one:0
+current_cell:program
+instruction:0
+one:1 two:2 three:3 four:4 five:5 six:6 seven:7 eight:8 nine:9 zero:0
+
+start:2 program_start_location one p_s_minus_one
+
+checkinst:7 current_cell inst
+7 inst:0 instruction
+
+
+4 instruction zero put
+4 instruction one add
+4 instruction two subtract
+4 instruction three jump
+4 instruction four jumpifequal
+4 instruction five jumpifless
+4 instruction six input
+4 instruction seven copy
+4 instruction nine halt
+
+
+put:1 current_cell one new_value
+    1 current_cell two cell_num
+    7 cell_num:0 cell_number
+    1 p_s_minus_one cell_number cell_number
+    7 new_value:0 cell_number:0
+
+    1 current_cell three current_cell
+    3 checkinst
+
+
+
+add:1 current_cell one add_opd1
+    1 current_cell two add_opd2
+    1 current_cell three sum
+    7 add_opd1:0 addend1
+    7 add_opd2:0 addend2
+    7 sum:0 addition
+    1 p_s_minus_one addend1 addend1
+    1 p_s_minus_one addend2 addend2
+    1 p_s_minus_one addition addition
+    1 addend1:0 addend2:0 addition:0
+
+    1 current_cell four current_cell
+    3 checkinst
+
+
+
+subtract:1 current_cell one sub_opd1
+         1 current_cell two sub_opd2
+         1 current_cell three diff
+         7 sub_opd1:0 subtrahend1
+         7 sub_opd2:0 subtrahend2
+         7 diff:0 difference
+         1 p_s_minus_one subtrahend1 subtrahend1
+         1 p_s_minus_one subtrahend2 subtrahend2
+         1 p_s_minus_one difference difference
+         2 subtrahend1:0 subtrahend2:0 difference:0
+
+         1 current_cell four current_cell
+         3 checkinst
+
+
+
+jump:1 current_cell one current_cell
+     7 current_cell index
+     1 p_s_minus_one index:0 current_cell
+     3 checkinst
+
+
+
+jumpifequal:1 current_cell one j_eq1
+            1 current_cell two j_eq2
+            7 j_eq1:0 jump_eq1
+            7 j_eq2:0 jump_eq2
+            1 p_s_minus_one jump_eq1 jump_eq1
+            1 p_s_minus_one jump_eq2 jump_eq2
+            4 jump_eq1:0 jump_eq2:0 equal
+            1 current_cell four current_cell
+            3 checkinst 
+            equal:1 current_cell three current_cell
+            7 current_cell j_to
+            1 p_s_minus_one j_to:0 current_cell
+            3 checkinst
+
+
+
+jumpifless:1 current_cell one j_less1
+           1 current_cell two j_less2
+           7 j_less1:0 jump_less1
+           7 j_less2:0 jump_less2
+           1 p_s_minus_one jump_less1 jump_less1
+           1 p_s_minus_one jump_less2 jump_less2
+           5 jump_less1:0 jump_less2:0 less
+           1 current_cell four current_cell
+           3 checkinst 
+           less:1 current_cell three current_cell
+           7 current_cell jump_to
+
+           1 p_s_minus_one jump_to:0 current_cell
+           3 checkinst
+
+
+
+input:1 current_cell one input_cell
+      7 input_cell:0 input_cell_no
+      1 p_s_minus_one input_cell_no input_cell_no
+      6 input_cell_no:0
+
+      1 current_cell two current_cell
+      3 checkinst
+
+
+
+copy:1 current_cell one copyfrom
+     1 current_cell two copyto
+     7 copyfrom:0 cf
+     7 copyto:0 ct
+     1 p_s_minus_one cf cf
+     1 p_s_minus_one ct ct
+     7 cf:0 ct:0
+
+     1 current_cell three current_cell
+     3 checkinst
+
+
+
+halt:9
+
+
+
+
+
+
+
+program:
